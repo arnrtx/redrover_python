@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 origins = [
-    "http://localhost:5173",
+    "http://localhost:5174",
 ]
 
 app = FastAPI()
@@ -63,6 +63,7 @@ def read_test_case(test_case_id: int):
 
 @app.get("/testcases/", response_model=list[Case])
 def read_cases():
+    print("Getting all test cases")
     return cases
 
 
