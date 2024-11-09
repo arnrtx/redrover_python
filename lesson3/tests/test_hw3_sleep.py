@@ -40,3 +40,5 @@ def test_registration(driver):
     success_text = driver.find_element(By.ID, "successMessage")
     assert success_text.text == 'Вы успешно зарегистрированы!', 'Нет сообщения об успешной регистрации'
     print("Есть сообщение об успешной регистрации")
+
+    driver.quit()

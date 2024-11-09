@@ -41,3 +41,5 @@ def test_registration(driver, wait):
         success_text = wait.until(EC.visibility_of_element_located((By.ID, "successMessage")))
         assert success_text.is_displayed(), 'Нет сообщения об успешной регистрации'
         print("Есть сообщение об успешной регистрации")
+
+    driver.quit()
