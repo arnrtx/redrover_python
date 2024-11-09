@@ -14,10 +14,6 @@ def test_registration(driver):
     assert result_element.text == "Зарегистрироваться", "Клик не привел к ожидаемому результату"
     print("Клик по кнопке работает корректно")
 
-    driver.get('https://victoretc.github.io/selenium_waits/')
-    visible_after_button = driver.find_element(By.ID, "startTest")
-    visible_after_button.click()
-
     login_field = driver.find_element(By.ID, "login")
     password_field = driver.find_element(By.ID, "password")
     login_field.send_keys("login")
